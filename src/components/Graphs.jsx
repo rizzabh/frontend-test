@@ -41,13 +41,37 @@ const Graphs = () => {
         }
    }, [change]);
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        setIsOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsOpen(false);
+    };
+
     return (
-        <div className=" max-md:p-0 mt-3 gap-4 grid max-[1250px]:grid-cols-1 grid-cols-[2fr_1fr] rounded-2xl p-8 w-fit mx-12 max-md:mx-2 items-center">
+        <div className=" max-md:p-0 mt-3 gap-4 2xl:gap-16 grid max-[1250px]:grid-cols-1 grid-cols-[2fr_1fr] rounded-2xl p-8 w-fit mx-12 max-md:mx-2 items-center">
             <div className="bg-white rounded-2xl p-4">
-                <div className="flex gap-4 justify-between items-center px-2 m-4">
+                <div className="flex gap-4 justify-between items-center px-2 m-4 relative">
                     <div>Overview</div>
-                    <div className="px-4 py-2 bg-gray-100 rounded-2xl flex gap-1">Quaterly <img src="./chevron-down 2.png" alt="" /></div>
+                    <div className="px-4 py-2 bg-gray-100 rounded-2xl flex gap-1 cursor-pointer" onClick={handleOpenModal}>Quaterly <img src="./chevron-down 2.png" alt="" /></div>
+                    {isOpen && (
+                <div className="modal absolute right-0 bg-white mt-40 z-30 border shadow-md px-8 py-2 rounded-md">
+                    <div className="modal-content">
+                        <span className="close cursor-pointer" onClick={handleCloseModal} >&times;</span>
+                        <div className="styled-list">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
+                    </div>
                 </div>
+            )}</div>
                 <div className="bar-graph w-full">
                     <BarChart
                         width={change ? 300 : 500}
@@ -92,6 +116,7 @@ const Graphs = () => {
                     </PieChart>
                 </div>
             </div>
+            
         </div>
     );
 };
