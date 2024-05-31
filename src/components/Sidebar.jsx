@@ -1,7 +1,7 @@
 import React from "react"
 const Sidebar = () => {
   return (
-    <div className="p-4 sticky top-0 left-0 max-md:px-0 w-80 bg-white shadow-xl border-black h-[105vh] max-md:w-fit">
+    <div className="p-4 sticky top-0 left-0 max-md:px-0 w-80 2xl:min-w-80 bg-white shadow-xl border-black h-[105vh] max-md:w-fit">
         <div className="flex items-center gap-2 p-4 justify-left">
           <div className="flex gap-2"><img src="./setting 1.png" alt="" />
           <h1 className="text-2xl font-bold  max-md:hidden">Dashboard</h1> </div>
