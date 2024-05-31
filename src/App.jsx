@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       <div className="flex">
-        <Sidebar />
-        <div>
-          <Header />
-          <Money />
-          <Graphs />
-          <Table />
+        <Sidebar className=" mx-auto" />
+        <div className="mx-auto 2xl:ml-72">
+          <Header className=" mx-auto"/>
+          <Money className=" mx-auto" />
+          <Graphs className=" mx-auto" />
+          <Table className=" mx-auto" />
         </div>
       </div>
     </>
