@@ -2,7 +2,7 @@ import React from "react";
 
 const Money = () => {
   return (
-    <div className="bg-white grid grid-cols-3 gap-3 mt-3 max-[1255px]:grid-cols-2 max-sm:grid-cols-1 rounded-2xl p-8 w-fit mx-12  items-center max-md:mx-2">
+    <div className="bg-white grid grid-cols-3 gap-3 2xl:gap-20  mt-3 max-[1255px]:grid-cols-2 max-sm:grid-cols-1 rounded-2xl p-8 w-fit mx-12  items-center max-md:mx-2">
       <div className="flex gap-4 items-center">
         <img src="./green.png" alt="" />
         <div className="border-r pr-8">
